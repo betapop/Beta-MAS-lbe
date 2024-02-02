@@ -7,6 +7,9 @@ A submod that adds new topics, spritepacks, interactions, and more! Just an expa
 - A compilation of custom music!
 - (Eventually) Added compliments, piano and normal songs, window reacts, minigames (?) and more!
 
+## 🌕 Installation
+Coming soon ☆
+
 ## 🌟Special Thanks to...
 These people for helping me out so far!
 - u/mayday-mayjay [[github](https://github.com/mayday-mayjay)/[reddit](https://www.reddit.com/user/mayday-mayjay/comments/w03fdq/mjs_info_area/)]
