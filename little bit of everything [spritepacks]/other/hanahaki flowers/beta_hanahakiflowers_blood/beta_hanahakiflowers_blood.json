@@ -1,0 +1,29 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_hanahakiflowers_blood",
+    "img_sit": "beta_hanahakiflowers_blood",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 4,
+    "acs_type": "facepaint_acs",
+    "mux_type": [
+        "facepaint"
+    ],
+    "stay_on_start": true,
+    "giftname": "beta_hanahakiflowers_blood",
+    "dlg_desc": "facepaint",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Bloody Hanahaki Flowers",
+        "thumb": "beta_hanahakiflowers_blood",
+        "group": "facepaint_acs",
+        "select_dlg": [
+            "I don't feel so good... you'll help me, right, [player]?~",
+
+        ]
+    }
+}

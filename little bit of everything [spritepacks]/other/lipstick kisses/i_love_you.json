@@ -1,0 +1,30 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_lipstick_kisses",
+    "img_sit": "beta_lipstick_kisses",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 4,
+    "acs_type": "facepaint_acs",
+    "mux_type": [
+        "facepaint"
+    ],
+    "stay_on_start": true,
+    "giftname": "beta_lipstick_kisses",
+    "dlg_desc": "facepaint",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Lipstick Kisses",
+        "thumb": "beta_lipstick_kisses",
+        "group": "facepaint_acs",
+        "select_dlg": [
+            "I love you more then anything, [player]!",
+            "You spoil me so much, [player]."
+
+        ]
+    }
+}

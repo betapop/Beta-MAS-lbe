@@ -1,0 +1,29 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_hanahakiflowers",
+    "img_sit": "beta_hanahakiflowers",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 4,
+    "acs_type": "facepaint_acs",
+    "mux_type": [
+        "facepaint"
+    ],
+    "stay_on_start": true,
+    "giftname": "beta_hanahakiflowers",
+    "dlg_desc": "facepaint",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Hanahaki Flowers",
+        "thumb": "beta_hanahakiflowers",
+        "group": "facepaint_acs",
+        "select_dlg": [
+            "I don't feel so good... you'll help me, right, [player]?~",
+
+        ]
+    }
+}
