@@ -5,7 +5,7 @@ A submod that adds new topics, spritepacks, interactions, and more! Just an expa
 - 20 Added topics!
 - 2 Added goodbyes and 5 added brbs!
 - A compilation of custom music!
-- (Eventually) Added compliments, piano and normal songs, window reacts, minigames (?) and more!
+- (Eventually) Added compliments, piano songs, window reacts, minigames (?) and more!
 
 ## 🌕 Installation
 Coming soon ☆
