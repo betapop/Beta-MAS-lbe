@@ -145,6 +145,7 @@ label monika_mmd:
             m 5hkbsb "Even so, I hope you had fun learning about it~"
         
     $ persistent._mas_pm_seenmmd = True
+    $ mas_protectedShowEVL('monika_pmxeditor', 'EVE', _random=True)
     return
 
 
@@ -155,8 +156,7 @@ init 5 python:
             eventlabel="monika_pmxeditor",
             prompt="PMX/PMD Editor",
             category=["media", "misc"],
-            conditional="persistent._mas_pm_seenmmd",
-            action=EV_ACT_PUSH
+            random=False
         )
     )
 
@@ -176,3 +176,56 @@ label monika_pmxeditor:
         m 4hub "If it sounds interesting, you should check it out, [player].{w=0.5} I would love to see what you make!"
         m 5hkbsb "Maybe you can even make a model of me~ haha!"
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_rpgmaker",
+            category=["games"],
+            prompt="RPG Maker Horror Games",
+            random=True,
+            aff_range=(mas_aff.NORMAL, None)
+        )
+    )
+
+label monika_rpgmaker:
+    m 1eud "Hey [player], do you know what RPG maker is?"
+    m 1eubsb "It's a quite popular game engine intended to make RPG-style games in!"
+    m 4eub "What I wanted to talk about is the amount of popular indie horror games using the engine!"
+    m 1hub "Some of note are Omori, Dead Plate, Yume Nikki, Ib, and Your Turn to Die!{w=0.5} But of course there's many more."
+    m 2eub "The engine itself is an interesting topic of discussion as well! It's no code, so very minimal coding knowledge is needed."
+    m 4eub "And it's also been around for a while, the first version of it being seen in 1992."
+    m 2lkbfsdlb "You can find it on Steam, but the prices do tend to be on the higher side… although compared to other engines it's relatively cheap."
+    m 1eud "Now back to the original topic… why do so many horror games use it?"
+    m 4hub "Well a major thing is something I just explained… since it's a no code-based engine and it's a bit cheaper, a lot of people gravitate towards it!"
+    m 1hub "Another thing is that it's very versatile with what it can do in terms of effects and even plugins!"
+    m 4tub "... Although that's just me guessing, haha. A lot of people have different reasons for picking certain engines."
+    m 5ekbsb "Maybe one day someone can turn DDLC into an RPG maker game!~"
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_hanahaki",
+            category=["fandom"],
+            prompt="Hanahaki",
+            random=True,
+            aff_range=(mas_aff.NORMAL, None)
+        )
+    )
+
+label monika_hanahaki:
+    m 1eud "Hey, [player]? Do you remember that time we talked about fanfiction?"
+    m 4eub "Well, while I was looking deeper into it… I found a trope I wanted to talk to you about."
+    m 1eud "Its called Hanahaki. Or maybe more known… the Hanahaki Disease."
+    m 2dkd "It's a fictional disease, where the victim who has it coughs up flower petals because of one-sided love."
+    m 2lkd "It can only end if the person romantically requites their feelings,"
+    m 2rkd "Or if they get it surgically removed. But even then, they lose the ability to love again."
+    m 2dkd "It's a sad tale of pining, and sometimes results in unhappy endings due to death or losing their ability to love."
+    m 5rtd "It is popular in the fandom and fanfiction realms, but it has been used in other things such as poems, songs, and other creative outlets."
+    m 7hub "It's been done all sorts of ways by a bunch of different people, so if you’re interested, definitely check it out!"
+    m 2eksdld "Maybe in the past… I would have caught the disease."
+    m 5ekbsb "But with you by my side? I’d say that's anything but one-sided ~ I love you, [player]!"
+    return "love"
