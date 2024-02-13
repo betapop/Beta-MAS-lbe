@@ -1,3 +1,5 @@
+![alt text](https://media.discordapp.net/attachments/847519376923689030/1207079402652041246/Little_Bit_of_Everything_1_-removebg-preview1.png?ex=65de574c&is=65cbe24c&hm=214b48fa38de3acb005293d73665b4e774ebaecea42474c869cb7c3be3614c18&=&format=webp&quality=lossless)
+
 # 💫 MAS Submod - Little Bit of Everything
 A submod that adds new topics, spritepacks, interactions, and more! Just an expansion-type submod to add a little more to your Monika After Story!
 
