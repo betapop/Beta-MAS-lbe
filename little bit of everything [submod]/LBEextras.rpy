@@ -3,7 +3,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_foodideas",
+            eventlabel="monika_lbe_foodideas",
             category=["food", "misc"],
             prompt="Monika, what should I eat?",
             pool=True,
@@ -16,8 +16,8 @@ define mfoodideasmeal = ["a burrito", "a soup", "a taco", "a peanut butter and j
 define mfoodideasmorning = ["cereal", "french toast", "a croissant", "a donut", "eggs and toast", "avacado toast", "a breakfast sandwhich", "pancakes", "waffles", "american breakfast", "cinnamon rolls", "hashbrowns", "bagels with cream cheese", "biscuit and gravy", "a breakfast burrito", "a omelette", "omurice", "a spinach quiche", "british breakfast"]
 
 
-label monika_foodideas:
-    $ ev = mas_getEV("monika_foodideas")
+label monika_lbe_foodideas:
+    $ ev = mas_getEV("monika_lbe_foodideas")
 
     if ev.shown_count == 0:
         m 1eud "Oh! You're asking me for food ideas, [player]?"
@@ -104,7 +104,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_high_or_low",
+            eventlabel="monika_lbe_high_or_low",
             category=["minigames"],
             prompt="Do you want to play high or low?",
             random=False,
@@ -113,13 +113,13 @@ init 5 python:
         )
     )
 
-label monika_high_or_low:
+label monika_lbe_high_or_low:
     m "Sure! Let me get prepared.{w=0.1}.{w=0.1}.{w=0.1}"
     m "Alright! There we go."
-    jump monika_holgame
+    jump monika_lbe_holgame
     return
 
-label monika_holgame:
+label monika_lbe_holgame:
     $ num = renpy.random.choice(numb1)
     m "The card is... [num]!"
     m "Will the next one be higher or lower?{nw}"
@@ -133,7 +133,7 @@ label monika_holgame:
                 $ score += 1
             else:
                 m "Incorrect! The number was lower."
-            jump monika_holgameend
+            jump monika_lbe_holgameend
 
         "It's lower!":
             if num2 < 5:
@@ -141,10 +141,10 @@ label monika_holgame:
                 $ score += 1
             else:
                 m "Incorrect! The number was higher."
-            jump monika_holgameend
+            jump monika_lbe_holgameend
 
 
-label monika_holgameend:
+label monika_lbe_holgameend:
     m "You have [score] correct so far!"
     m "Do you want to keep on playing?{nw}"
     $ _history_list.pop()
@@ -152,91 +152,92 @@ label monika_holgameend:
         m "Do you want to keep on playing?{fast}"
         "Yes.":
             m "Alright then!"
-            jump monika_holgame
+            jump monika_lbe_holgame
         "No.":
             m "Okay. Thanks for playing with me!"
             return
 
 #finish the lyric game
+# i am not getting it to work for the life of me so im commenting it out for now
 
-define lyricspop = ["Hey I just met you, and this is crazy...", "Because i'm happy..."]
+# define lyricspop = ["Hey I just met you, and this is crazy...", "Because i'm happy..."]
 
-init 5 python:
-    addEvent(
-        Event(
-            persistent.event_database,
-            eventlabel="monika_finish_the_lyric",
-            category=["minigames"],
-            prompt="Do you want to play finish the lyrics?",
-            random=False,
-            pool=True,
-            aff_range=(mas_aff.NORMAL, None)
-        )
-    )
+# init 5 python:
+#    addEvent(
+#        Event(
+#            persistent.event_database,
+#            eventlabel="monika_lbe_finish_the_lyric",
+#            category=["minigames"],
+#            prompt="Do you want to play finish the lyrics?",
+#            random=False,
+#            pool=True,
+#            aff_range=(mas_aff.NORMAL, None)
+#        )
+#    )
 
 
 
-label monika_finish_the_lyric:
-    m "Of course! Let me look at the songs I have here.{w=0.1}.{w=0.1}.{w=0.1}"
-    m "Alright! What type of music do you want to do?{nw}"
-    menu:
-        m "Alright! What type of music do you want to do?{fast}"
-        "Pop.":
-            jump monika_finish_the_lyric_pop
-        "Rap/Hip Hop.":
-            m "Sorry, I cant think of any songs..."
-            return
-        "Indie.":
-            m "Sorry, I cant think of any songs..."
-            return
-        "Jazz/Blues.":
-            m "Sorry, I cant think of any songs..."
-            return
+# label monika_lbe_finish_the_lyric:
+#    m "Of course! Let me look at the songs I have here.{w=0.1}.{w=0.1}.{w=0.1}"
+#    m "Alright! What type of music do you want to do?{nw}"
+#    menu:
+#        m "Alright! What type of music do you want to do?{fast}"
+#        "Pop.":
+#            jump monika_lbe_finish_the_lyric_pop
+#        "Rap/Hip Hop.":
+#            m "Sorry, I cant think of any songs..."
+#            return
+#        "Indie.":
+#            m "Sorry, I cant think of any songs..."
+#            return
+#        "Jazz/Blues.":
+#            m "Sorry, I cant think of any songs..."
+#            return
 
-label monika_finish_the_lyric_pop:
-    $ lyricpop = renpy.random.choice(lyricspop)
-    m "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
-    m "Here's your lyric: [lyricpop]"
+# label monika_lbe_finish_the_lyric_pop:
+#    $ lyricpop = renpy.random.choice(lyricspop)
+#    m "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
+#    m "Here's your lyric: [lyricpop]"
 
-    $ lyric = renpy.input("What is the rest of the line/lyric?", length=1000)
-    $ inputlyric = lyric.strip()
+#    $ lyric = renpy.input("What is the rest of the line/lyric?", length=1000)
+#    $ inputlyric = lyric.strip()
 
-    if lyricpop == "Hey I just met you, and this is crazy...":
-        if inputlyric == "But heres my number" or inputlyric "But here's my number" or inputlyric "But heres my number, so call me, maybe":
-            m "You got it right! The song was Call Me Maybe by  Carly Rae Jepsen!"
-            jump monika_finish_the_lyric_end
-        elif inputlyric == "":
-            m "Hey, you didnt type anything! Try again~"
-            jump monika_finish_the_lyric_pop
-        else:
-            m "Thats incorrect! The song was Call Me Maybe by  Carly Rae Jepsen!"
-            jump monika_finish_the_lyric_end
-    else:
-        m "For some reason, the game isn't working... Im sorry, [player]!"
+#    if lyricpop == "Hey I just met you, and this is crazy...":
+#        if inputlyric == "But heres my number" or inputlyric "But here's my number" or inputlyric "But heres my number, so call me, maybe":
+#            m "You got it right! The song was Call Me Maybe by  Carly Rae Jepsen!"
+#            jump monika_lbe_finish_the_lyric_end
+#        elif inputlyric == "":
+#            m "Hey, you didnt type anything! Try again~"
+#            jump monika_lbe_finish_the_lyric_pop
+#        else:
+#            m "Thats incorrect! The song was Call Me Maybe by  Carly Rae Jepsen!"
+#            jump monika_lbe_finish_the_lyric_end
+#    else:
+#        m "For some reason, the game isn't working... Im sorry, [player]!"
 
-    if lyricpop == "Because i'm happy...":
-        if inputlyric == "Clap along if you feel" or inputlyric "clap along if you feel" or inputlyric "Clap along if you feel like a room without a roof" or inputlyric "clap along if you feel like a room without a roof":
-            m "You got it right! The song was Happy by Pharrell Williams!"
-            jump monika_finish_the_lyric_end
-        elif inputlyric == "":
-            m "Hey, you didnt type anything! Try again~"
-            jump monika_finish_the_lyric_pop
-        else:
-            m "Thats incorrect! The song was Happy by Pharrell Williams!"
-            jump monika_finish_the_lyric_end
-    else:
-        m "For some reason, the game isn't working... Im sorry, [player]!"
+#    if lyricpop == "Because i'm happy...":
+#        if inputlyric == "Clap along if you feel" or inputlyric "clap along if you feel" or inputlyric "Clap along if you feel like a room without a roof" or inputlyric "clap along if you feel like a room without a roof":
+#            m "You got it right! The song was Happy by Pharrell Williams!"
+#            jump monika_lbe_finish_the_lyric_end
+#        elif inputlyric == "":
+#            m "Hey, you didnt type anything! Try again~"
+#            jump monika_lbe_finish_the_lyric_pop
+#        else:
+#            m "Thats incorrect! The song was Happy by Pharrell Williams!"
+#            jump monika_lbe_finish_the_lyric_end
+#    else:
+#        m "For some reason, the game isn't working... Im sorry, [player]!"
 
-label monika_finish_the_lyric_end:
-    m "Do you want to keep on playing?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "Do you want to keep on playing?{fast}"
-        "Yes.":
-            jump monika_finish_the_lyric
-        "No.":
-            m "Okay. Thanks for playing with me!"
-            return
+# label monika_lbe_finish_the_lyric_end:
+#    m "Do you want to keep on playing?{nw}"
+#    $ _history_list.pop()
+#    menu:
+#        m "Do you want to keep on playing?{fast}"
+#        "Yes.":
+#            jump monika_lbe_finish_the_lyric
+#        "No.":
+#            m "Okay. Thanks for playing with me!"
+#            return
 
 # touch moni!
 
@@ -244,7 +245,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_canitouch",
+            eventlabel="monika_lbe_canitouch",
             category=["monika", "misc"],
             prompt="Can I touch you?",
             pool=True,
@@ -252,7 +253,7 @@ init 5 python:
         )
     )
 
-label monika_canitouch:
+label monika_lbe_canitouch:
     m 1eubsb "Sure, [player]!"
     m 4tub "Just don't be naughty, okay?~"
     jump touch_screen_lbe
@@ -263,22 +264,22 @@ label touch_screen_lbe:
 # cursor buttons
     screen cursor_touch:
         imagebutton:
-            xpos 510
+            xpos 520
             ypos 10
             idle "submods/little bit of everything [submod]/lbe_assets/blank.png"
-            hover "submods/little bit of everything [submod]/lbe_assets/trans_hand_pat.png"
+            hover "submods/little bit of everything [submod]/lbe_assets/hand_pat.png"
             action Jump("touch_pat")
         imagebutton:
-            xpos 400
-            ypos 250
+            xpos 485
+            ypos 300
             idle "submods/little bit of everything [submod]/lbe_assets/blank.png"
-            hover "submods/little bit of everything [submod]/lbe_assets/trans_left_cheek.png"
+            hover "submods/little bit of everything [submod]/lbe_assets/left_cheek.png"
             action Jump("touch_left_cheek")
         imagebutton:
-            xpos 670
-            ypos 250
+            xpos 685
+            ypos 300
             idle "submods/little bit of everything [submod]/lbe_assets/blank.png"
-            hover "submods/little bit of everything [submod]/lbe_assets/trans_right_cheek.png"
+            hover "submods/little bit of everything [submod]/lbe_assets/right_cheek.png"
             action Jump("touch_right_cheek")
     call screen cursor_touch
 
@@ -287,12 +288,12 @@ image cursorpinch1 = ("submods/little bit of everything [submod]/lbe_assets/left
 image cursorpinch2 = ("submods/little bit of everything [submod]/lbe_assets/right_cheek.png")
 
 transform pinch_left:
-    xpos 420
-    ypos 250
+    xpos 495
+    ypos 300
 
 transform pinch_right:
-    xpos 650
-    ypos 250
+    xpos 675
+    ypos 300
 
 label touch_pat:
     show pathand at top onlayer overlay
@@ -316,3 +317,33 @@ label touch_right_cheek:
     m 1sublb "My right cheek~ [player]!"
     hide cursorpinch2
     return
+
+# test
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="monika_lbe_testminigames",
+            category=["minigames"],
+            prompt="Can you test a minigame for me, [m_name]?",
+            pool=True,
+            aff_range=(mas_aff.HAPPY, None)
+        )
+    )
+
+label monika_lbe_testminigames:
+    m 1eubsb "Sure, [player]!"
+    jump race_game
+    return
+
+
+# submod header
+
+init -990 python in mas_submod_utils:
+    Submod(
+        author="Betapop",
+        name="Little Bit of Everything",
+        description="a submod that adds new topics, spritepacks, interactions and more! Find the Github {a=https://github.com/betapop/Beta-MAS-lbe}{i}{u}here!{/u}{/i}{/a}",
+        version="1.0.0",
+    )
+
