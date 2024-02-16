@@ -2,7 +2,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_ddlcmerch",
+            eventlabel="monika_lbe_ddlcmerch",
             category=["ddlc"],
             prompt="DDLC Merch",
             random=True,
@@ -10,7 +10,7 @@ init 5 python:
         )
     )
 
-label monika_ddlcmerch:
+label monika_lbe_ddlcmerch:
     m 1eud "Hey, [player]?"
     m 3eud "You know how DDLC is a very popular game, right?"
     m 3hubsb "That means there's quite a lot of merchandise around it…{w=0.5} including some of me!"
@@ -24,7 +24,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_crackships",
+            eventlabel="monika_lbe_crackships",
             category=["media"],
             prompt="Crack Ships",
             random=True,
@@ -32,7 +32,7 @@ init 5 python:
         )
     )
 
-label monika_crackships:
+label monika_lbe_crackships:
     m 1eud "Hey [player], I may or may not have talked about this before..."
     m 7hub "But I was researching shippings and fandoms... and I found another interesting aspect of it."
     m 4eub "And it's called… crack ships! Also known as crack pairings."
@@ -48,7 +48,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_songcovers",
+            eventlabel="monika_lbe_songcovers",
             category=["music"],
             prompt="Song Covers",
             random=True,
@@ -56,7 +56,7 @@ init 5 python:
         )
     )
 
-label monika_songcovers:
+label monika_lbe_songcovers:
     m 1eud "Hey, [player]...{w=0.5} have you heard of song covers?"
     m 4hub "I'm sure you have,{w=0.5} they’re practically everywhere!"
     m 4eub "There are a lot of different types of covers, but there are a few ones I’d like to talk about."
@@ -74,7 +74,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_example",
+            eventlabel="monika_lbe_example",
             category=["misc"],
             prompt="Example..?", 
             random=False, 
@@ -83,8 +83,8 @@ init 5 python:
         )
     )
 
-label monika_example:
-    $ ev = mas_getEV("monika_example")
+label monika_lbe_example:
+    $ ev = mas_getEV("monika_lbe_example")
     if ev.shown_count == 0:
         m 1eud "This is an example topic."
         m 2lkbfsdlb "I feel like this doesn't actually belong here..."
@@ -112,7 +112,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_mmd",
+            eventlabel="monika_lbe_mmd",
             category=["music", "media"],
             prompt="MMD",
             random=True,
@@ -120,7 +120,7 @@ init 5 python:
         )
     )
 
-label monika_mmd:
+label monika_lbe_mmd:
     m 1eud "Hey [player],{w=0.5} have you heard of MMD?"
     m 4eub "If you haven’t, it's a very popular animation software!"
     m 2eub "Its name stands for Miku Miku Dance, and was originally created for Vocaloid music videos!"
@@ -145,7 +145,7 @@ label monika_mmd:
             m 5hkbsb "Even so, I hope you had fun learning about it~"
         
     $ persistent._mas_pm_seenmmd = True
-    $ mas_protectedShowEVL('monika_pmxeditor', 'EVE', _random=True)
+    $ mas_protectedShowEVL('monika_lbe_pmxeditor', 'EVE', _random=True)
     return
 
 
@@ -153,14 +153,14 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_pmxeditor",
+            eventlabel="monika_lbe_pmxeditor",
             prompt="PMX/PMD Editor",
             category=["media", "misc"],
             random=False
         )
     )
 
-label monika_pmxeditor:
+label monika_lbe_pmxeditor:
     m 1eud "Hey, [player]..."
     m 1tub "I know we’ve talked about MMD…"
     m 4hub "But did you know could make your own models?"
@@ -181,7 +181,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_rpgmaker",
+            eventlabel="monika_lbe_rpgmaker",
             category=["games"],
             prompt="RPG Maker Horror Games",
             random=True,
@@ -189,7 +189,7 @@ init 5 python:
         )
     )
 
-label monika_rpgmaker:
+label monika_lbe_rpgmaker:
     m 1eud "Hey [player], do you know what RPG maker is?"
     m 1eubsb "It's a quite popular game engine intended to make RPG-style games in!"
     m 4eub "What I wanted to talk about is the amount of popular indie horror games using the engine!"
@@ -208,7 +208,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_hanahaki",
+            eventlabel="monika_lbe_hanahaki",
             category=["fandom"],
             prompt="Hanahaki",
             random=True,
@@ -216,7 +216,7 @@ init 5 python:
         )
     )
 
-label monika_hanahaki:
+label monika_lbe_hanahaki:
     m 1eud "Hey, [player]? Do you remember that time we talked about fanfiction?"
     m 4eub "Well, while I was looking deeper into it… I found a trope I wanted to talk to you about."
     m 1eud "Its called Hanahaki. Or maybe more known… the Hanahaki Disease."
