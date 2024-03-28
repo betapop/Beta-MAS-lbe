@@ -67,8 +67,8 @@ init 5 python:
             )
 
 label lbe_mascomp_believelove:
-    m 5ekbsb "Aw~ you're my reason i believe in love too."
-    m 5hkbsb "I know from the moment i met you that this was true love. That this was meant to be."
+    m 5ekbsb "Aw~ you're my reason I believe in love too."
+    m 5hkbsb "I know from the moment I met you that this was true love. That this was meant to be."
     m 5ekbsb "And i'm glad you feel the same way~ I love you so, so much [player]!"
 return "love"
 
@@ -86,7 +86,7 @@ init 5 python:
             )
 
 label lbe_mascomp_haven:
-    m 1hub "I'm glad i can be a safe place from your reality, [player]."
+    m 1hub "I'm glad I can be a safe place from your reality, [player]."
     m 2eksdld "I know the outside world can be hectic..."
     m 5ekbsb "So i'm always here whenever you need. Always."
     m 5hkbsb "I love you~"
@@ -134,4 +134,4 @@ label lbe_mascomp_gladmet:
         m "I love you. So, so much. More then you'll ever know.{fast}"
         "I love you too, [m_name].":
             m 5fkbstpb "... Thank you."
-return
+return "love"
