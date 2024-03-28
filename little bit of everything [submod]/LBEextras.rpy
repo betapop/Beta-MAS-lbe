@@ -94,7 +94,7 @@ label monika_lbe_foodideas:
                 m 4hub "Hope that helps!~"
     return
 
-#high or low game
+#high or low game [it kinda works]
 
 define numb1 =  ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 define numb2 = ["2", "3", "4", "5", "6", "7", "8", "9"]
@@ -114,47 +114,47 @@ init 5 python:
     )
 
 label monika_lbe_high_or_low:
-    m "Sure! Let me get prepared.{w=0.1}.{w=0.1}.{w=0.1}"
-    m "Alright! There we go."
+    m 1eubsb "Sure! Let me get prepared.{w=0.1}.{w=0.1}.{w=0.1}"
+    m 4eub "Alright! There we go."
     jump monika_lbe_holgame
     return
 
 label monika_lbe_holgame:
     $ num = renpy.random.choice(numb1)
-    m "The card is... [num]!"
-    m "Will the next one be higher or lower?{nw}"
+    m 1tub "The card is... [num]!"
+    m 4hub "Will the next one be higher or lower?{nw}"
     $ num2 = renpy.random.choice(numb2)
     $ _history_list.pop()
     menu:
         m "Will the next one be higher or lower?{fast}"
         "It's higher!":
             if num2 >= 5:
-                m "Correct! The number was higher!"
+                m 4eub "Correct! The number was higher!"
                 $ score += 1
             else:
-                m "Incorrect! The number was lower."
+                m 2lkbfsdlb "Incorrect! The number was lower."
             jump monika_lbe_holgameend
 
         "It's lower!":
             if num2 < 5:
-                m "Correct! The number was lower!"
+                m 4eub "Correct! The number was lower!"
                 $ score += 1
             else:
-                m "Incorrect! The number was higher."
+                m 2lkbfsdlb "Incorrect! The number was higher."
             jump monika_lbe_holgameend
 
 
 label monika_lbe_holgameend:
-    m "You have [score] correct so far!"
-    m "Do you want to keep on playing?{nw}"
+    m 1eubsb "You have [score] correct so far!"
+    m 1eud "Do you want to keep on playing?{nw}"
     $ _history_list.pop()
     menu:
         m "Do you want to keep on playing?{fast}"
         "Yes.":
-            m "Alright then!"
+            m 4eub "Alright then!"
             jump monika_lbe_holgame
         "No.":
-            m "Okay. Thanks for playing with me!"
+            m 4hub "Okay. Thanks for playing with me!"
             return
 
 #finish the lyric game
@@ -249,7 +249,7 @@ init 5 python:
             category=["monika", "misc"],
             prompt="Can I touch you?",
             pool=True,
-            aff_range=(mas_aff.AFFECTIONATE, None)
+            aff_range=(mas_aff.HAPPY, None)
         )
     )
 
@@ -258,6 +258,10 @@ label monika_lbe_canitouch:
     m 4tub "Just don't be naughty, okay?~"
     jump touch_screen_lbe
     return
+
+define mheadpat = ["Aww.. thanks~", "Your touch is so nice~", "Head pats, huh?~", "Mmmm...", "Your touch is so comforting, haha~", "That feels good~"]
+define mlcheek = ["Touching my cheeks, hm?~", "My left cheek~", "Don't poke me~ haha!"]
+define mrcheek = ["Touching my cheeks, hm?~", "My right cheek~", "Don't poke me~ haha!"]
 
 label touch_screen_lbe:
     show monika staticpose at t11
@@ -298,44 +302,44 @@ transform pinch_right:
 label touch_pat:
     show pathand at top onlayer overlay
     with Dissolve(1.0)
-    m 1eubsb "Aww.. thanks [player]!"
-    m 5ekbsb "Your touch is so nice~"
-    m 5hkbsb "I love you!"
+    $ touchpatrandom = renpy.random.choice(mheadpat)
+    m 5ekbsb "[touchpatrandom]"
     hide pathand
-    return "love"
+    return
 
 label touch_left_cheek:
+    $ lcrandom = renpy.random.choice(mlcheek)
     show cursorpinch1 at pinch_left onlayer overlay
     with Dissolve(1.0)
-    m 1sublb "My left cheek~ [player]!"
+    m 5ekbsb "[lcrandom]"
     hide cursorpinch1
     return
 
 label touch_right_cheek:
+    $ rcrandom = renpy.random.choice(mrcheek)
     show cursorpinch2 at pinch_right onlayer overlay
     with Dissolve(1.0)
-    m 1sublb "My right cheek~ [player]!"
+    mm 5ekbsb "[rcrandom]"
     hide cursorpinch2
     return
 
-# test
+# make it so this unlocks by dialogue
 init 5 python:
     addEvent(
         Event(
             persistent.event_database,
-            eventlabel="monika_lbe_testminigames",
+            eventlabel="monika_lbe_racinggame",
             category=["minigames"],
-            prompt="Can you test a minigame for me, [m_name]?",
+            prompt="Can we play a racing game, [m_name]?",
             pool=True,
             aff_range=(mas_aff.HAPPY, None)
         )
     )
 
-label monika_lbe_testminigames:
-    m 1eubsb "Sure, [player]!"
+label monika_lbe_racinggame:
+    m 1eubsb "Sure, [player]! Get ready to race~"
     jump race_game
     return
-
 
 # submod header
 
