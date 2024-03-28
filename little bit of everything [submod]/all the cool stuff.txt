@@ -1,0 +1,78 @@
+hey there! so you're either a playtester, someone looking through all the code, or just myself trying to remember all the things to playtest. 
+
+no matter who you are, heres a full list of all the things included so far:
+
+DIALOGUE:
+
+-- Normal Aff
+
+- Song Covers
+- Crack Ships
+- MMD
+- PMX Editor [unlocked from MMD topic]
+- RPG Maker
+- Hanahaki [unlocked from fanfiction topic] [havent coded that in there yet]
+- History of Swimwear
+- Content Farms
+
+-- Happy Aff
+
+- DDLC Merch
+- Law Based Games
+- Inflation
+
+-- Affectionate Aff
+
+- Example...? [talk menu]
+
+
+
+COMPLIMENTS:
+
+- You light up the room!
+- You’re the missing puzzle piece in my life!
+- You’re the whole package– beauty, brains, and personality!
+- You’re the reason why I believe in love.
+- You are my safe haven in this crazy world.
+- On a scale from 1 to 10, you’re an 11.
+- I'm so glad we met.
+
+BRBS:
+
+- I'm going to go eat something [revamped]
+- I'm going to go do some chores [revamped]
+- I'm going out somewhere
+- I'm going to scroll online
+- I'm going to lay down
+
+GOODBYES:
+
+- I'm going to add a spritepack or submod.
+- I'm going to go out somewhere.
+
+
+FUN STUFF:
+
+- Racing Minigame
+- Boop Monika [with images!]
+- High or Low [kind of working]
+- Ask Monika About What You Should Eat
+
+
+CUSTOM MUSIC DUMP:
+- 49 OST Tracks
+
+SPRITEPACKS:
+- 6 Custom Spacerooms
+- 4 Pong Reskins
+- 4 Makeups/Facepaints
+- 7 Hand Skintones [for boop minigame]
+- 1 Figure
+- 2 Head Acessories
+- 1 Scarf
+- 1 Tattoo
+- 1 Outfit
+- 1 Earring
+
+
+Last Updated: 3/28/24 [im not dead i promise]
