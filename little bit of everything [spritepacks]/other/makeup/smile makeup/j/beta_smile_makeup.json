@@ -1,0 +1,30 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_smile_makeup",
+    "img_sit": "beta_smile_makeup",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 4,
+    "acs_type": "facepaint_acs",
+    "mux_type": [
+        "facepaint"
+    ],
+    "stay_on_start": true,
+    "giftname": "beta_smile_makeup",
+    "dlg_desc": "makeup",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Smile Makeup",
+        "thumb": "beta_smile_makeup",
+        "group": "facepaint_acs",
+        "select_dlg": [
+            "How pretty!",
+            "Thanks for the makeup, [player]."
+
+        ]
+    }
+}

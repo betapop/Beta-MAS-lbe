@@ -1,0 +1,28 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_dango_earring",
+    "img_sit": "beta_dango_earring",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 5,
+    "acs_type": "earrings",
+    "mux_type": [
+        "earrings"
+    ],
+    "stay_on_start": true,
+    "giftname": "beta_dango_earring",
+    "dlg_desc": "earrings",
+    "dlg_plural": true,
+    "select_info": {
+        "display_name": "Dango Earrings",
+        "thumb": "beta_dango_earring",
+        "group": "earrings",
+        "select_dlg": [
+            "How tasty!"
+        ]
+    }
+}

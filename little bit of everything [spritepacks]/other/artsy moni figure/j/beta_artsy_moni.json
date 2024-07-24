@@ -1,0 +1,28 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_artsy_moni",
+    "img_sit": "beta_artsy_moni",
+    "pose_map": {
+	"default": "0",
+        "use_reg_for_l": true
+    },
+    "rec_layer": 2,
+    "priority": 7,
+    "acs_type": "ltable_acs",
+    "stay_on_start": true,
+    "keep_on_desk": true,
+    "select_info": {
+	"display_name": "Artsy Moni Figure",
+	"thumb": "beta_artsy_moni",
+	"group": "ltable_acs",
+	"select_dlg": [
+		"Hello, mini me!",
+		"Welcome to art class!"
+	]
+    },
+    "dlg_desc": "figure",
+    "dlg_plural": false,
+    "giftname": "beta_artsy_moni"
+}

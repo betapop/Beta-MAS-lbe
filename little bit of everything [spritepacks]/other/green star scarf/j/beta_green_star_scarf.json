@@ -1,0 +1,30 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_green_star_scarf",
+    "img_sit": "beta_green_star_scarf",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 8,
+    "acs_type": "necklace",
+    "stay_on_start": true,
+    "priority": 8,
+    "dlg_desc": "necklace",
+    "dlg_plural": false,
+    "select_info": {
+        "display_name": "Green Star Scarf",
+        "thumb": "beta_green_star_scarf",
+        "group": "necklace",
+        "select_dlg": [
+            "What a cute scarf!"
+        ]
+    },
+    "giftname": "beta_green_star_scarf",
+    "arm_split": {
+        "default": "0",
+        "use_reg_for_l": true
+    }
+}
