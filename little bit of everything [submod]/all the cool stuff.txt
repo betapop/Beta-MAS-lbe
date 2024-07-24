@@ -11,7 +11,7 @@ DIALOGUE:
 - MMD
 - PMX Editor [unlocked from MMD topic]
 - RPG Maker
-- Hanahaki [unlocked from fanfiction topic] [havent coded that in there yet]
+- Hanahaki
 - History of Swimwear
 - Content Farms
 
@@ -29,9 +29,6 @@ DIALOGUE:
 
 COMPLIMENTS:
 
-- You light up the room!
-- You’re the missing puzzle piece in my life!
-- You’re the whole package– beauty, brains, and personality!
 - You’re the reason why I believe in love.
 - You are my safe haven in this crazy world.
 - On a scale from 1 to 10, you’re an 11.
@@ -69,7 +66,7 @@ SPRITEPACKS:
 - 7 Hand Skintones [for boop minigame]
 - 1 Figure
 - 2 Head Acessories
-- 1 Scarf
+- 1 Scarf/Necklace
 - 1 Tattoo
 - 1 Outfit
 - 1 Earring
