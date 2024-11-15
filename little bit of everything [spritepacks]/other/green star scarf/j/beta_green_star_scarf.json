@@ -9,15 +9,15 @@
         "l_default": "5"
     },
     "rec_layer": 8,
-    "acs_type": "necklace",
+    "acs_type": "choker",
     "stay_on_start": true,
     "priority": 8,
-    "dlg_desc": "necklace",
+    "dlg_desc": "choker",
     "dlg_plural": false,
     "select_info": {
         "display_name": "Green Star Scarf",
         "thumb": "beta_green_star_scarf",
-        "group": "necklace",
+        "group": "choker",
         "select_dlg": [
             "What a cute scarf!"
         ]
