@@ -4,10 +4,10 @@
 A submod that adds new topics, spritepacks, interactions, and more! Just an expansion-type submod to add a little more to your Monika After Story!
 
 ## ✨ Features
-- 20 Added topics!
-- 2 Added goodbyes and 5 added brbs!
+- Many new Added topics!
+- 2 Added goodbyes and 6 added brbs!
 - A compilation of custom music for easy use!
-- 4 Added compliments!
+- More Added compliments!
 - Another boop feature!
 - (Eventually) Added piano songs, window reacts, minigames and more!
 
