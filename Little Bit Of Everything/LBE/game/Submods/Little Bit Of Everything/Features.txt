@@ -53,20 +53,16 @@ GOODBYES:
 FUN STUFF:
 
 - Racing Minigame
-- Boop Monika [with images!]
-- High or Low [kind of working]
+- High or Low
+- Finish the lyrics
 - Ask Monika About What You Should Eat
 - Added a 'puter
 
-
-CUSTOM MUSIC DUMP:
-- 49 OST Tracks
 
 SPRITEPACKS:
 - 4 Custom Spacerooms
 - 4 Pong Reskins
 - 4 Makeups/Facepaints
-- 7 Hand Skintones [for boop minigame]
 - 1 Figure
 - 2 Head Acessories
 - 1 Scarf/Choker

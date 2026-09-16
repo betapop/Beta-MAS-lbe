@@ -185,8 +185,8 @@ init 5 python:
     )
 
 label lbe_finish_the_lyric:
-    m "Of course! Let me look at the songs I have here.{w=0.1}.{w=0.1}.{w=0.1}"
-    m "Alright! What type of music do you want to do?{nw}"
+    m 3hub "Of course! Let me look at the songs I have here.{w=0.1}.{w=0.1}.{w=0.1}"
+    m 1eub "Alright! What type of music do you want to do?{nw}"
     menu:
         m "Alright! What type of music do you want to do?{fast}"
         "Pop.":
@@ -195,70 +195,70 @@ label lbe_finish_the_lyric:
             jump lbe_ftl_rap1
             return
         "Nevermind.":
-            m "All good, [player]. Let me know whenever you want to play!"
+            m 3hub "All good, [player]. Let me know whenever you want to play!"
             return
 
 label lbe_ftl_pop1:
-$ lbe_lyric_list_pop = [lbe_happy_lyric, lbe_cumb_lyric, lbe_barbie_lyric, lbe_iwitw_lyric, lbe_sou_lyric]
+    $ lbe_lyric_list_pop = [lbe_happy_lyric, lbe_cumb_lyric, lbe_barbie_lyric, lbe_iwitw_lyric, lbe_sou_lyric]
 
-$ lbe_lyricpop = renpy.random.choice(lbe_lyric_list_pop)
-m "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
-m "Here's your lyric: {i}[lbe_lyricpop]{/i}"
+    $ lbe_lyricpop = renpy.random.choice(lbe_lyric_list_pop)
+    m 1dua "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
+    m 1fub "Here's your lyric: {i}[lbe_lyricpop]{/i}"
 
-jump lbe_ftl_pop2
+    jump lbe_ftl_pop2
 
 label lbe_ftl_pop2:
     $ lbe_lyric = renpy.input("What is the rest of the line/lyric?", length=1000).lower()
 
     if lbe_lyricpop == lbe_cumb_lyric:
         if lbe_lyric in lbe_cumb_ans:
-            m "You got it right! The song was Call Me Maybe by Carly Rae Jepsen!"
+            m 3wub "You got it right! The song was Call Me Maybe by Carly Rae Jepsen!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_pop2
         else:
-            m "That's incorrect! The song was Call Me Maybe by Carly Rae Jepsen!"
+            m 3hkb "That's incorrect! The song was Call Me Maybe by Carly Rae Jepsen!"
             jump lbe_ftl_end
     elif lbe_lyricpop == lbe_happy_lyric:
         if lbe_lyric in lbe_happy_ans:
-            m "You got it right! The song was Happy by Pharrell Williams!"
+            m 3wub "You got it right! The song was Happy by Pharrell Williams!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_pop2
         else:
-            m "That's incorrect! The song was Happy by Pharrell Williams!"
+            m 3hkb "That's incorrect! The song was Happy by Pharrell Williams!"
             jump lbe_ftl_end
     elif lbe_lyricpop == lbe_sou_lyric:
         if lbe_lyric in lbe_sou_ans:
-            m "You got it right! The song was Shape of You by Ed Sheeran!"
+            m 3wub "You got it right! The song was Shape of You by Ed Sheeran!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_pop2
         else:
-            m "That's incorrect! The song was Shape of You by Ed Sheeran!"
+            m 3hkb "That's incorrect! The song was Shape of You by Ed Sheeran!"
             jump lbe_ftl_end
     elif lbe_lyricpop == lbe_iwitw_lyric:
         if lbe_lyric in lbe_iwitw_ans:
-            m "You got it right! The song was I Want It That Way by Backstreet Boys!"
+            m 3wub "You got it right! The song was I Want It That Way by Backstreet Boys!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_pop2
         else:
-            m "That's incorrect! The song was I Want It That Way by Backstreet Boys!"
+            m 3hkb "That's incorrect! The song was I Want It That Way by Backstreet Boys!"
             jump lbe_ftl_end
     elif lbe_lyricpop == lbe_barbie_lyric:
         if lbe_lyric in lbe_barbie_ans:
-            m "You got it right! The song was Barbie Girl by Aqua!"
+            m 3wub "You got it right! The song was Barbie Girl by Aqua!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_pop2
         else:
-            m "That's incorrect! The song was Barbie Girl by Aqua!"
+            m 3hkb "That's incorrect! The song was Barbie Girl by Aqua!"
             jump lbe_ftl_end
     else:
         m "For some reason, the game isn't working... Im sorry, [player]!"
@@ -270,8 +270,8 @@ label lbe_ftl_rap1:
     $ lbe_lyric_list_rap = [lbe_thrift_lyric, lbe_alr_lyric, lbe_hotbli_lyric, lbe_cua_lyric, lbe_mock_lyric]
 
     $ lbe_lyricrap = renpy.random.choice(lbe_lyric_list_rap)
-    m "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
-    m "Here's your lyric: {i}[lbe_lyricrap]{/i}"
+    m 1dua "Okay! Let me think of a song.{w=0.1}.{w=0.1}.{w=0.1}"
+    m 1fub "Here's your lyric: {i}[lbe_lyricrap]{/i}"
 
     jump lbe_ftl_rap2
 
@@ -280,56 +280,56 @@ label lbe_ftl_rap2:
 
     if lbe_lyricrap == lbe_alr_lyric:
         if lbe_lyric in lbe_alr_ans:
-            m "You got it right! The song was Alright by Kendrick Lamar!"
+            m 3wub "You got it right! The song was Alright by Kendrick Lamar!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_rap2
         else:
-            m "That's incorrect! The song was Alright by Kendrick Lamar!"
+            m 3hkb "That's incorrect! The song was Alright by Kendrick Lamar!"
             jump lbe_ftl_end
     elif lbe_lyricrap == lbe_hotbli_lyric:
         if lbe_lyric in lbe_hotbli_ans:
-            m "You got it right! The song was Hotline Bling by Drake!"
+            m 3wub "You got it right! The song was Hotline Bling by Drake!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_rap2
         else:
-            m "That's incorrect! The song was Hotline Bling by Drake!"
+            m 3hkb "That's incorrect! The song was Hotline Bling by Drake!"
             jump lbe_ftl_end
     elif lbe_lyricrap == lbe_cua_lyric:
         if lbe_lyric in lbe_cua_ans:
-            m "You got it right! The song was See you again by Tyler, The Creator!"
+            m 3wub "You got it right! The song was See you again by Tyler, The Creator!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_rap2
         else:
-            m "That's incorrect! The song was See you again by Tyler, The Creator!"
+            m 3hkb "That's incorrect! The song was See you again by Tyler, The Creator!"
             jump lbe_ftl_end
     elif lbe_lyricrap == lbe_mock_lyric:
         if lbe_lyric in lbe_mock_ans:
-            m "You got it right! The song was Mockingbird by Eminem!"
+            m 3wub "You got it right! The song was Mockingbird by Eminem!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_rap2
         else:
-            m "That's incorrect! The song was Mockingbird by Eminem!"
+            m 3hkb "That's incorrect! The song was Mockingbird by Eminem!"
             jump lbe_ftl_end
     elif lbe_lyricpop == lbe_thrift_lyric:
         if lbe_lyric in lbe_thrift_ans:
-            m "You got it right! The song was Thrift Shop by Macklemore!"
+            m 3wub "You got it right! The song was Thrift Shop by Macklemore!"
             jump lbe_ftl_end
         elif lbe_lyric == "":
-            m "Hey, you didnt type anything! Try again~"
+            m 2tfb "Hey, you didn't type anything! Try again~"
             jump lbe_ftl_rap2
         else:
-            m "That's incorrect! The song was Thrift Shop by Macklemore!"
+            m 3hkb "That's incorrect! The song was Thrift Shop by Macklemore!"
             jump lbe_ftl_end
     else:
-        m "For some reason, the game isn't working... Im sorry, [player]!"
+        m 2mksdlb "For some reason, the game isn't working... Im sorry, [player]!"
         return
 
     jump lbe_ftl_end
@@ -339,13 +339,13 @@ label lbe_ftl_end:
     m "Do you want to keep on playing?{nw}"
     $ _history_list.pop()
     menu:
-        m "Do you want to keep on playing?{fast}"
+        m 3eub "Do you want to keep on playing?{fast}"
         "Yes.":
             $ lbe_lyricpop = None
             $ lbe_lyricrap = None
             jump lbe_finish_the_lyric
         "No.":
-            m "Okay. Thanks for playing with me!"
+            m 3hub "Okay. Thanks for playing with me!"
             return
 
 
@@ -381,6 +381,6 @@ init -990 python in mas_submod_utils:
         author="Betapop",
         name="Little Bit of Everything",
         description="A submod that adds new topics, spritepacks, interactions and more! Find the Github {a=https://github.com/betapop/Beta-MAS-lbe}{i}{u}here!{/u}{/i}{/a}",
-        version="1.1.0",
+        version="1.1.1",
     )
 
