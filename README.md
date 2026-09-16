@@ -14,6 +14,8 @@ The zip comes with *four* folders. If you are just interested in the submod, you
 
 If you have version 1.0 of this mod, please delete it and reinstall this version! It fixes major bugs.
 
+Download the [latest release](https://github.com/betapop/Beta-MAS-lbe/releases) and extract the zip.
+
 ### LBE Folder
 Take the `game` folder and drag it into your DDLC folder. This folder could be named something like `DDLC-1.1.1-pc`! Place the `game` folder inside this folder and let it write into/override the content.
 
