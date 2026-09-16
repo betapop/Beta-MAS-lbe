@@ -1,0 +1,26 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_cat_clip_v2",
+    "img_sit": "beta_cat_clip_v2",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "rec_layer": 5,
+    "acs_type": "left-hair-clip",
+    "stay_on_start": true,
+    "ex_props": {
+    },
+    "select_info": {
+        "display_name": "Cat Clip v2",
+        "thumb": "beta_cat_clip_v2",
+        "group": "left-hair-clip",
+        "select_dlg": [
+            "Meow!",
+            "Thanks for the hairclip, [player]!"
+        ]
+    },
+    "giftname": "beta_cat_clip_v2"
+}

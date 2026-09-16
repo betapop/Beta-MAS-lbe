@@ -1,0 +1,31 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 0,
+    "name": "beta_plant_head",
+    "img_sit": "beta_plant_head",
+    "pose_map": {
+        "default": "0",
+        "l_default": "5"
+    },
+    "stay_on_start": true,
+    "rec_layer": 3,
+    "priority": 20,
+    "acs_type": "headpiece_acs",
+    "mux_type": [
+        "headpiece_acs"
+    ],
+    "ex_props": {
+        "left-hair-strand-eye-level": false
+    },
+    "select_info": {
+        "display_name": "Plant Head",
+        "thumb": "beta_plant_head",
+        "group": "headpiece_acs",
+        "select_dlg": [
+        "What a cute little plant!",
+        "Hmm, something's sprouting out of my head..."
+        ]
+    },
+    "giftname": "beta_plant_head"
+}

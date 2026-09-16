@@ -1,0 +1,30 @@
+{
+    "__author": "Betapop",
+    "version": 3,
+    "type": 2,
+    "name": "beta_green_flower_swimtop",
+    "img_sit": "beta_green_flower_swimtop",
+    "pose_map": {
+        "mpm_type": 0,
+        "default": true,
+        "use_reg_for_l": true
+    },
+    "stay_on_start": true,
+    "ex_props": {
+        "home": true,
+        "bare-right-shoulder": true
+    },
+    "select_info": {
+        "display_name": "Green Flower Swimtop (Beta)",
+        "thumb": "beta_green_flower_swimtop",
+        "group": "clothes",
+        "select_dlg": [
+            "Do you like it, [player]?",
+            "Isn't it such a cute swimtop?",
+            "Great for summer time!"
+        ]
+    },
+    "giftname": "beta_green_flower_swimtop",
+    "pose_arms": {}
+}
+
